@@ -1,0 +1,36 @@
+C51 COMPILER V9.01   SETT0                                                                 12/05/2020 18:06:22 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE SETT0
+OBJECT MODULE PLACED IN ..\output\sett0.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\sys\sett0.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) D
+                    -EBUG OBJECTEXTEND PRINT(.\sett0.lst) OBJECT(..\output\sett0.obj)
+
+line level    source
+
+   1          #include "sett0.h"
+   2          
+   3          void SetT0()
+   4          {
+   5   1              TMOD|=0X01;
+   6   1      
+   7   1              TH0=0xd8;
+   8   1              TL0=0xf0;       
+   9   1              ET0=1;
+  10   1              EA=1;
+  11   1              TR0=1;
+  12   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     16    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

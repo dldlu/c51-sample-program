@@ -1,0 +1,208 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/15/2020  11:38:39  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\SETUP\C51\BIN\BL51.EXE ..\output\main.obj, ..\output\int0.obj, ..\output\led.obj, ..\output\setint0.obj, ..\outp
+>> ut\delay.obj TO ..\output\Int0 PRINT (.\Int0.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ..\output\main.obj (MAIN)
+  ..\output\int0.obj (INT0)
+  ..\output\led.obj (LED)
+  ..\output\setint0.obj (SETINT0)
+  ..\output\delay.obj (DELAY)
+  D:\KEIL\SETUP\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  ..\output\Int0 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?LED
+            DATA    000AH     0001H     UNIT         ?DT?INT0
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     005DH     UNIT         ?PR?INT0?INT0
+            CODE    0063H     0020H     UNIT         ?PR?LED?LED
+            CODE    0083H     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    00A3H     000CH     UNIT         ?C_C51STARTUP
+            CODE    00AFH     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    00B7H     0007H     UNIT         ?PR?SETINT0?SETINT0
+
+
+
+OVERLAY MAP OF MODULE:   ..\output\Int0 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?INT0?INT0
+  +--> ?PR?_DELAY_MS?DELAY
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?SETINT0?SETINT0
+  +--> ?PR?LED?LED
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/15/2020  11:38:39  PAGE 2
+
+
+
+?PR?LED?LED
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\Int0 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:00AFH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:00AFH         LINE#         7
+  C:00AFH         LINE#         8
+  C:00AFH         LINE#         10
+  C:00AFH         LINE#         11
+  C:00AFH         LINE#         12
+  C:00B2H         LINE#         13
+  C:00B5H         LINE#         14
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        INT0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00B0H.2       PUBLIC        key
+  C:0006H         PUBLIC        Int0
+  B:00A0H.0       PUBLIC        led1
+  D:00C8H         PUBLIC        T2CON
+  D:000AH         PUBLIC        j
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          INT0
+  C:0006H         LINE#         7
+  C:0023H         LINE#         9
+  C:0026H         LINE#         10
+  C:0026H         LINE#         11
+  C:002DH         LINE#         12
+  C:0030H         LINE#         13
+  C:0030H         LINE#         14
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/15/2020  11:38:39  PAGE 3
+
+
+  C:0033H         LINE#         15
+  C:0033H         LINE#         16
+  C:0035H         LINE#         17
+  C:003CH         LINE#         18
+  C:0045H         LINE#         19
+  C:0048H         LINE#         20
+  C:0048H         LINE#         21
+  C:0048H         LINE#         22
+  -------         ENDPROC       INT0
+  -------         ENDMOD        INT0
+
+  -------         MODULE        LED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0063H         PUBLIC        Led
+  D:00B8H         PUBLIC        IP
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.0       PUBLIC        led1
+  D:00C8H         PUBLIC        T2CON
+  D:0008H         PUBLIC        k
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          LED
+  C:0063H         LINE#         5
+  C:0063H         LINE#         6
+  C:0063H         LINE#         7
+  C:0068H         LINE#         8
+  C:0068H         LINE#         9
+  C:006AH         LINE#         10
+  C:0071H         LINE#         11
+  C:0082H         LINE#         12
+  -------         ENDPROC       LED
+  -------         ENDMOD        LED
+
+  -------         MODULE        SETINT0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  C:00B7H         PUBLIC        SetInt0
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          SETINT0
+  C:00B7H         LINE#         3
+  C:00B7H         LINE#         4
+  C:00B7H         LINE#         5
+  C:00B9H         LINE#         6
+  C:00BBH         LINE#         7
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/15/2020  11:38:39  PAGE 4
+
+
+  C:00BDH         LINE#         8
+  -------         ENDPROC       SETINT0
+  -------         ENDMOD        SETINT0
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0083H         PUBLIC        _delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        n
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0083H         LINE#         3
+  C:0083H         LINE#         4
+  C:0083H         LINE#         5
+  C:0086H         LINE#         6
+  C:008DH         LINE#         7
+  C:00A2H         LINE#         8
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+Program Size: data=12.0 xdata=0 code=190
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

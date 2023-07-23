@@ -1,0 +1,163 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/14/2020  23:53:30  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\SETUP\C51\BIN\BL51.EXE ..\output\main.obj, ..\output\key.obj, ..\output\delay.obj TO ..\output\obj PRINT (.\obj.
+>> m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ..\output\main.obj (MAIN)
+  ..\output\key.obj (KEY)
+  ..\output\delay.obj (DELAY)
+  D:\KEIL\SETUP\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  ..\output\obj (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0039H     UNIT         ?PR?KEYDOWN?KEY
+            CODE    003CH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0048H     0009H     UNIT         ?PR?DELAY?DELAY
+            CODE    0051H     0005H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   ..\output\obj (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?KEYDOWN?KEY
+
+?PR?KEYDOWN?KEY
+  +--> ?PR?DELAY?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\obj (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/14/2020  23:53:30  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0051H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0051H         LINE#         5
+  C:0051H         LINE#         6
+  C:0051H         LINE#         7
+  C:0051H         LINE#         8
+  C:0051H         LINE#         9
+  C:0054H         LINE#         10
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        KEY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A0H.0       PUBLIC        LED1
+  B:00A0H.1       PUBLIC        LED2
+  B:00A0H.2       PUBLIC        LED3
+  B:00A0H.3       PUBLIC        LED4
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  B:0090H.5       PUBLIC        k1
+  B:0090H.4       PUBLIC        k2
+  B:0090H.3       PUBLIC        k3
+  B:0090H.2       PUBLIC        k4
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0003H         PUBLIC        KeyDown
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          KEYDOWN
+  C:0003H         LINE#         5
+  C:0003H         LINE#         6
+  C:0003H         LINE#         7
+  C:0007H         LINE#         10
+  C:0009H         LINE#         11
+  C:000CH         LINE#         12
+  C:000CH         LINE#         13
+  C:000FH         LINE#         14
+  C:0012H         LINE#         15
+  C:0014H         LINE#         16
+  C:0014H         LINE#         17
+  C:0017H         LINE#         18
+  C:0017H         LINE#         19
+  C:001AH         LINE#         20
+  C:001DH         LINE#         21
+  C:001FH         LINE#         22
+  C:001FH         LINE#         23
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/14/2020  23:53:30  PAGE 3
+
+
+  C:0021H         LINE#         26
+  C:0023H         LINE#         27
+  C:0026H         LINE#         28
+  C:0026H         LINE#         29
+  C:0029H         LINE#         30
+  C:002CH         LINE#         31
+  C:002EH         LINE#         32
+  C:002EH         LINE#         33
+  C:0031H         LINE#         34
+  C:0031H         LINE#         35
+  C:0034H         LINE#         36
+  C:0037H         LINE#         37
+  C:0039H         LINE#         38
+  C:0039H         LINE#         39
+  C:003BH         LINE#         40
+  -------         ENDPROC       KEYDOWN
+  -------         ENDMOD        KEY
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0048H         PUBLIC        delay
+  -------         PROC          DELAY
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0048H         LINE#         3
+  C:0048H         LINE#         4
+  C:0048H         LINE#         7
+  C:004AH         LINE#         8
+  C:004CH         LINE#         10
+  C:004CH         LINE#         11
+  C:004EH         LINE#         12
+  C:0050H         LINE#         13
+  -------         ENDPROC       DELAY
+  -------         ENDMOD        DELAY
+
+Program Size: data=9.0 xdata=0 code=86
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

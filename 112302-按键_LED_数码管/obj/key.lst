@@ -1,0 +1,61 @@
+C51 COMPILER V9.01   KEY                                                                   11/24/2020 14:38:05 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE KEY
+OBJECT MODULE PLACED IN ..\output\key.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\dev\key.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) DEB
+                    -UG OBJECTEXTEND PRINT(.\key.lst) OBJECT(..\output\key.obj)
+
+line level    source
+
+   1          #include "key.h"
+   2          #include "delay.h"
+   3          #include "nixled.h"
+   4          
+   5          void key()
+   6          {
+   7   1              P17=0;P12=1;P13=1;
+   8   1              P17=0;
+   9   1              if(P13==0)
+  10   1              {
+  11   2                      Delay_ms(100);
+  12   2                      if(P13==0)
+  13   2                      D5=~D5;
+  14   2              }
+  15   1      
+  16   1              if(P12==0)
+  17   1              {
+  18   2                      Delay_ms(100);
+  19   2                      if(P12==0)
+  20   2                      D6=~D6; 
+  21   2              }
+  22   1      
+  23   1              if(P11==0)
+  24   1              {
+  25   2                      Delay_ms(100);
+  26   2                      if(P11==0)
+  27   2                      D7=~D7; 
+  28   2              }
+  29   1      
+  30   1              if(P10==0)
+  31   1              {
+  32   2                      Delay_ms(100);
+  33   2                      if(P10==0)
+  34   2                      NixLed();
+  35   2              }
+  36   1              P17=1;
+  37   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     72    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

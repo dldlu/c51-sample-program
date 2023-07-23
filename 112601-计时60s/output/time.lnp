@@ -1,0 +1,7 @@
+"..\output\main.obj",
+"..\output\nixled.obj",
+"..\output\t0.obj",
+"..\output\delay.obj",
+"..\output\sett0.obj" 
+TO "..\output\time" 
+PRINT(".\time.m51") RAMSIZE(256) 

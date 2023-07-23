@@ -1,0 +1,224 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Keil\120501-ledµ„’Û\obj\led.uvproj
+Project File Date:  12/05/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+..\SRC\MAIN\MAIN.C(4): error C244: 'ledduan': can't initialize, bad type or class
+..\SRC\MAIN\MAIN.C(4): error C132: 'ledduan': not in formal parameter list
+..\SRC\MAIN\MAIN.C(5): error C244: 'ledwei': can't initialize, bad type or class
+..\SRC\MAIN\MAIN.C(5): error C132: 'ledwei': not in formal parameter list
+..\SRC\MAIN\MAIN.C(8): error C132: 'main': not in formal parameter list
+..\SRC\MAIN\MAIN.C(8): error C141: syntax error near '{'
+..\SRC\MAIN\MAIN.C(9): error C136: 'i': 'void' on variable
+..\SRC\MAIN\MAIN.C(9): error C132: 'i': not in formal parameter list
+..\SRC\MAIN\MAIN.C(10): error C141: syntax error near 'while'
+..\SRC\MAIN\MAIN.C(10): error C141: syntax error near '1'
+..\SRC\MAIN\MAIN.C(12): error C141: syntax error near '=', expected ')'
+..\SRC\MAIN\MAIN.C(12): error C129: missing ';' before '<'
+compiling delay.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+..\SRC\SYS\DELAY.C(4): error C132: '_Delay_ns': not in formal parameter list
+..\SRC\SYS\DELAY.C(4): error C141: syntax error near '{'
+..\SRC\SYS\DELAY.C(5): error C136: 'i': 'void' on variable
+..\SRC\SYS\DELAY.C(5): error C244: 'i': can't initialize, bad type or class
+..\SRC\SYS\DELAY.C(5): error C136: 'i': 'void' on variable
+..\SRC\SYS\DELAY.C(5): error C132: 'i': not in formal parameter list
+..\SRC\SYS\DELAY.C(5): error C136: 'j': 'void' on variable
+..\SRC\SYS\DELAY.C(5): error C244: 'j': can't initialize, bad type or class
+..\SRC\SYS\DELAY.C(5): error C136: 'j': 'void' on variable
+..\SRC\SYS\DELAY.C(5): error C132: 'j': not in formal parameter list
+..\SRC\SYS\DELAY.C(6): error C141: syntax error near 'for'
+..\SRC\SYS\DELAY.C(6): error C141: syntax error near '=', expected ')'
+..\SRC\SYS\DELAY.C(6): error C129: missing ';' before '<'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+compiling delay.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+compiling delay.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+Target not created
+Build target 'Target 1'
+compiling main.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+compiling delay.c...
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xA3 skipped
+..\SRC\SYS\DELAY.H(8): error C100: unprintable character 0xBB skipped
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00AEH
+Program Size: data=26.0 xdata=0 code=272
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A2H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00AEH
+Program Size: data=26.0 xdata=0 code=272
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00B1H
+Program Size: data=26.0 xdata=0 code=275
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00B1H
+Program Size: data=26.0 xdata=0 code=275
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00B1H
+Program Size: data=26.0 xdata=0 code=275
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00B1H
+Program Size: data=26.0 xdata=0 code=275
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_NS?DELAY
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00B1H
+Program Size: data=26.0 xdata=0 code=275
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling delay.c...
+linking...
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00A5H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  _HCSEND
+    MODULE:  ..\output\main.obj (MAIN)
+    ADDRESS: 00B1H
+Program Size: data=26.0 xdata=0 code=243
+creating hex file from "..\output\led"...
+"..\output\led" - 0 Error(s), 3 Warning(s).

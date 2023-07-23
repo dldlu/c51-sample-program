@@ -1,0 +1,5 @@
+"..\output\main.obj",
+"..\output\delay.obj",
+"..\output\1602.obj" 
+TO "..\output\obj" 
+PRINT(".\obj.m51") RAMSIZE(256) 

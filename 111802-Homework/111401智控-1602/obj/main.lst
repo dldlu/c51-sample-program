@@ -1,0 +1,48 @@
+C51 COMPILER V9.01   MAIN                                                                  11/15/2020 13:09:57 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\output\main.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\main\main.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) D
+                    -EBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(..\output\main.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "intrins.h"
+   3          #include "delay.h"
+   4          #include "1602.h"
+   5          
+   6          u8 dat1[] = "EQ EQ EQDR";
+   7          u8 dat2[] = "  CTRL+6";
+   8          void main()
+   9          {
+  10   1              u8 i;
+  11   1      
+  12   1              Lcd();
+  13   1              LcdWriteCom(0x80);
+  14   1              for(i=0;i<10;i++)
+  15   1              {
+  16   2                      LcdWriteData(dat1[i]);  
+  17   2              }
+  18   1              LcdWriteCom(0xc0);
+  19   1              for(i=0;i<8;i++)
+  20   1              {
+  21   2                      LcdWriteData(dat2[i]);  
+  22   2              }
+  23   1              while(1);
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     59    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     20       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

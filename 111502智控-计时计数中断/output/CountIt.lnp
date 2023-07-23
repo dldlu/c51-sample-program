@@ -1,0 +1,7 @@
+"..\output\main.obj",
+"..\output\delay.obj",
+"..\output\led.obj",
+"..\output\setto.obj",
+"..\output\t0.obj" 
+TO "..\output\CountIt" 
+PRINT(".\CountIt.m51") RAMSIZE(256) 

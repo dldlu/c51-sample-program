@@ -1,0 +1,5 @@
+"..\output\main.obj",
+"..\output\nixled.obj",
+"..\output\delay.obj" 
+TO "..\output\smg02" 
+PRINT(".\smg02.m51") RAMSIZE(256) 

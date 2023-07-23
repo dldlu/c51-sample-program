@@ -1,0 +1,7 @@
+".\main.obj",
+".\delay.obj",
+".\1602.obj",
+".\key.obj",
+".\nixled.obj" 
+TO "znkz" 
+RAMSIZE(256) 

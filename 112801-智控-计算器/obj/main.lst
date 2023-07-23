@@ -1,0 +1,53 @@
+C51 COMPILER V9.01   MAIN                                                                  12/06/2020 19:14:06 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\user\main.c BROWSE INCDIR(..\hareword;..\user) DEBUG OBJECTEXTEND 
+                    -PRINT(.\main.lst) OBJECT(.\main.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "key.h"
+   3          #include "nixled.h"
+   4          #include "1602.h"
+   5          
+   6          #define LED P2
+   7          
+   8          void main()
+   9          {
+  10   1      
+  11   1              Lcd();
+  12   1      
+  13   1              Key_1();
+  14   1              NixLed1();
+  15   1      
+  16   1              Key_ch();
+  17   1              Key_2();
+  18   1              NixLed2();
+  19   1      
+  20   1              Add();
+  21   1      
+  22   1              LcdWriteCom(0x80);        
+  23   1              LcdWriteData((sum)/10+48);
+  24   1              LcdWriteData((sum)%10+48);
+  25   1              LED = sum;
+  26   1      
+  27   1              while(1);
+  28   1                              
+  29   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     57    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

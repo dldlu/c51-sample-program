@@ -1,0 +1,234 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/05/2020  18:06:22  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL\SETUP\C51\BIN\BL51.EXE ..\output\main.obj, ..\output\nixled.obj, ..\output\t0.obj, ..\output\delay.obj, ..\outpu
+>> t\sett0.obj TO ..\output\time PRINT (.\time.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ..\output\main.obj (MAIN)
+  ..\output\nixled.obj (NIXLED)
+  ..\output\t0.obj (T0)
+  ..\output\delay.obj (DELAY)
+  ..\output\sett0.obj (SETT0)
+  D:\KEIL\SETUP\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL\SETUP\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  ..\output\time (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0013H     UNIT         ?DT?NIXLED
+            DATA    001BH     0002H     UNIT         ?DT?T0
+            IDATA   001DH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     0031H     UNIT         ?PR?NIXLED?NIXLED
+            CODE    00CBH     0026H     UNIT         ?PR?TOT0?T0
+            CODE    00F1H     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    0111H     001BH     UNIT         ?PR?GETTIME?NIXLED
+            CODE    012CH     0013H     UNIT         ?C_INITSEG
+            CODE    013FH     0010H     UNIT         ?PR?SETT0?SETT0
+            CODE    014FH     000BH     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   ..\output\time (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?SETT0?SETT0
+  +--> ?PR?GETTIME?NIXLED
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2020  18:06:22  PAGE 2
+
+
+  +--> ?PR?NIXLED?NIXLED
+
+?PR?NIXLED?NIXLED
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  ..\output\time (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:014FH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:014FH         LINE#         5
+  C:014FH         LINE#         6
+  C:014FH         LINE#         7
+  C:0152H         LINE#         8
+  C:0152H         LINE#         9
+  C:0152H         LINE#         10
+  C:0155H         LINE#         11
+  C:0158H         LINE#         12
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        NIXLED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:0008H         PUBLIC        time
+  C:0111H         PUBLIC        GetTime
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:009AH         PUBLIC        NixLed
+  D:000AH         PUBLIC        nix
+  B:00A0H.2       PUBLIC        LSA
+  B:00A0H.3       PUBLIC        LSB
+  B:00A0H.4       PUBLIC        LSC
+  D:00C8H         PUBLIC        T2CON
+  D:001AH         PUBLIC        i
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          NIXLED
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2020  18:06:22  PAGE 3
+
+
+  C:009AH         LINE#         9
+  C:009AH         LINE#         10
+  C:009AH         LINE#         12
+  C:009DH         LINE#         13
+  C:009DH         LINE#         14
+  C:00A5H         LINE#         15
+  C:00A5H         LINE#         16
+  C:00A5H         LINE#         17
+  C:00A9H         LINE#         18
+  C:00A9H         LINE#         19
+  C:00AFH         LINE#         20
+  C:00AFH         LINE#         21
+  C:00B7H         LINE#         22
+  C:00BEH         LINE#         23
+  C:00C1H         LINE#         24
+  C:00CAH         LINE#         25
+  -------         ENDPROC       NIXLED
+  -------         PROC          GETTIME
+  C:0111H         LINE#         27
+  C:0111H         LINE#         28
+  C:0111H         LINE#         29
+  C:011DH         LINE#         30
+  C:012BH         LINE#         31
+  -------         ENDPROC       GETTIME
+  -------         ENDMOD        NIXLED
+
+  -------         MODULE        T0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:001BH         PUBLIC        ssec
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:001CH         PUBLIC        sec
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  D:00C8H         PUBLIC        T2CON
+  C:00CBH         PUBLIC        toT0
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TOT0
+  C:00CBH         LINE#         3
+  C:00CFH         LINE#         6
+  C:00D2H         LINE#         7
+  C:00D5H         LINE#         8
+  C:00D7H         LINE#         9
+  C:00DEH         LINE#         10
+  C:00DEH         LINE#         11
+  C:00E1H         LINE#         12
+  C:00E3H         LINE#         13
+  C:00E9H         LINE#         14
+  C:00ECH         LINE#         15
+  C:00ECH         LINE#         16
+  -------         ENDPROC       TOT0
+  -------         ENDMOD        T0
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2020  18:06:22  PAGE 4
+
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:00F1H         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        n
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:00F1H         LINE#         3
+  C:00F1H         LINE#         4
+  C:00F1H         LINE#         5
+  C:00F4H         LINE#         6
+  C:00FBH         LINE#         7
+  C:0110H         LINE#         8
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        SETT0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:013FH         PUBLIC        SetT0
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          SETT0
+  C:013FH         LINE#         3
+  C:013FH         LINE#         4
+  C:013FH         LINE#         5
+  C:0142H         LINE#         7
+  C:0145H         LINE#         8
+  C:0148H         LINE#         9
+  C:014AH         LINE#         10
+  C:014CH         LINE#         11
+  C:014EH         LINE#         12
+  -------         ENDPROC       SETT0
+  -------         ENDMOD        SETT0
+
+Program Size: data=30.0 xdata=0 code=338
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

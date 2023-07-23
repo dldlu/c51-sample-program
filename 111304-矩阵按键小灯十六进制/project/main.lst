@@ -1,0 +1,86 @@
+C51 COMPILER V9.01   MAIN                                                                  11/10/2020 16:19:38 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\main.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\srs\main.c BROWSE DEBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(.\ma
+                    -in.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <intrins.h>
+   3          typedef unsigned int u16;
+   4          typedef unsigned char u8;
+   5          
+   6          sbit LED1 = P2^0;
+   7          sbit LED2 = P2^1;
+   8          sbit LED3 = P2^2;
+   9          sbit LED4 = P2^3;
+  10          
+  11          u8 KeyValue;
+  12          
+  13          void delay100ms()
+  14          {
+  15   1              unsigned char i, j;
+  16   1              i = 180;
+  17   1              j = 73;
+  18   1              do
+  19   1              {
+  20   2                      while (--j);
+  21   2              } while (--i);
+  22   1      }
+  23          
+  24          
+  25          void Key_Down()
+  26          {
+  27   1              P1 = 0x7f;
+  28   1              if(P1 != 0x7f) 
+  29   1              {
+  30   2                      delay100ms();
+  31   2                      if(P1 != 0x7f)
+  32   2                      {
+  33   3                              if(P1 == 0x77)
+  34   3                                      KeyValue = 1;
+  35   3                              else if(P1 == 0x7b)
+  36   3                                      KeyValue = 2;
+  37   3                              else if(P1 == 0x7d)
+  38   3                                      KeyValue = 3;
+  39   3                              else if(P1 == 0x7e)
+  40   3                                      KeyValue = 4;
+  41   3                              else
+  42   3                                      KeyValue = 0;
+  43   3                      }while(P1 != 0x7f);                     
+  44   2              }               
+  45   1      }
+  46          
+  47          void main()
+  48          {
+  49   1              while(1)
+  50   1              {
+  51   2                      Key_Down();
+  52   2                      switch(KeyValue)
+  53   2                      {                                  
+  54   3                              case(1): LED1 = ~LED1; break;
+C51 COMPILER V9.01   MAIN                                                                  11/10/2020 16:19:38 PAGE 2   
+
+  55   3                              case(2): LED2 = ~LED2; break;
+  56   3                              case(3): LED3 = ~LED3; break;
+  57   3                              case(4): LED4 = ~LED4; break;   
+  58   3                      }       
+  59   2              }
+  60   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    111    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

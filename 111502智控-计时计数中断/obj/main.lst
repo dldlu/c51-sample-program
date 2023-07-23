@@ -1,0 +1,37 @@
+C51 COMPILER V9.01   MAIN                                                                  11/20/2020 14:40:52 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\output\main.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\main\main.c BROWSE INCDIR(..\src\dev;..\src\main;..\obj) DEBUG
+                    - OBJECTEXTEND PRINT(.\main.lst) OBJECT(..\output\main.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "led.h"
+   3          #include "t0.h"
+   4          #include "setto.h"
+   5          
+   6          void main()
+   7          {
+   8   1              
+   9   1              SetT0();
+*** WARNING C206 IN LINE 9 OF ..\SRC\MAIN\MAIN.C: 'SetT0': missing function-prototype
+  10   1              
+  11   1              while(1);       
+  12   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =      5    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

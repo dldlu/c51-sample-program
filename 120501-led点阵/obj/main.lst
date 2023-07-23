@@ -1,0 +1,46 @@
+C51 COMPILER V9.01   MAIN                                                                  12/24/2020 18:19:25 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\output\main.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\main\main.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) D
+                    -EBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(..\output\main.obj)
+
+line level    source
+
+   1          #include "hc595send.h"
+   2          #include "delay.h"
+   3          
+   4          unsigned char ledduan[] = {0x00,0x0c,0x54,0x64,0xdf,0x44,0x44,0x00};
+   5          unsigned char ledwei[] =  {0x7f,0xbf,0xdf,0xef,0xf7,0xfb,0xfd,0xfe}; 
+   6          
+   7          void main()
+   8          {
+   9   1              unsigned char i;
+  10   1              while(1)
+  11   1              {
+  12   2                      P0 = 0x7f;
+  13   2                      for(i=0;i<8;i++)
+  14   2                      {
+  15   3                              P0 = ledwei[i];
+  16   3                              HcSend(ledduan[i]);
+  17   3                              Delay_ms(1); 
+  18   3                              HcSend(0x00);
+  19   3                      }
+  20   2              }
+  21   1              
+  22   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     47    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     16       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

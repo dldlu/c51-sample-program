@@ -1,0 +1,79 @@
+C51 COMPILER V9.01   1602                                                                  11/15/2020 13:09:57 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 1602
+OBJECT MODULE PLACED IN ..\output\1602.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\dev\1602.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) DE
+                    -BUG OBJECTEXTEND PRINT(.\1602.lst) OBJECT(..\output\1602.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "delay.h"
+   3          #include "1602.h"
+   4          
+   5          void LcdWriteCom(u8 com)
+   6          {
+   7   1              LCD1602_RS = 0;
+   8   1              LCD1602_RW = 0;
+   9   1              
+  10   1              LCD1602_DATAPINS = com;
+  11   1              delay_ns(1);
+  12   1      
+  13   1              LCD1602_E = 1;   
+  14   1              delay_ns(5);
+  15   1              LCD1602_E = 0;
+  16   1      
+  17   1              LCD1602_DATAPINS = com << 4;
+  18   1              delay_ns(1);
+  19   1      
+  20   1              LCD1602_E = 1;   
+  21   1              delay_ns(5);
+  22   1              LCD1602_E = 0;
+  23   1      }
+  24          
+  25          void LcdWriteData(u8 dat)
+  26          {
+  27   1              LCD1602_E = 0;
+  28   1              LCD1602_RS = 1;
+  29   1              LCD1602_RW = 0;
+  30   1      
+  31   1              LCD1602_DATAPINS = dat; 
+  32   1              delay_ns(1);
+  33   1      
+  34   1              LCD1602_E = 1;  
+  35   1              delay_ns(5);  
+  36   1              LCD1602_E = 0;
+  37   1      
+  38   1              LCD1602_DATAPINS = dat << 4;
+  39   1              delay_ns(1);
+  40   1      
+  41   1              LCD1602_E = 1;   
+  42   1              delay_ns(5);
+  43   1              LCD1602_E = 0;
+  44   1      }
+  45          
+  46          void Lcd()
+  47          {
+  48   1              LcdWriteCom(0x32);      
+  49   1              LcdWriteCom(0x28);
+  50   1              LcdWriteCom(0x0c);
+  51   1              LcdWriteCom(0x06);
+  52   1              LcdWriteCom(0x01);      
+  53   1      }
+
+C51 COMPILER V9.01   1602                                                                  11/15/2020 13:09:57 PAGE 2   
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    133    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

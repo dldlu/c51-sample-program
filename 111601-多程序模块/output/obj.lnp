@@ -1,0 +1,7 @@
+"..\output\main.obj",
+"..\output\led.obj",
+"..\output\switch.obj",
+"..\output\1602.obj",
+"..\output\delay.obj" 
+TO "..\output\obj" 
+PRINT(".\obj.m51") RAMSIZE(256) 

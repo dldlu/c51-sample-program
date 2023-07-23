@@ -1,0 +1,21 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Keil\111801ÊýÂë¹Ü\obj\obj.uvproj
+Project File Date:  11/18/2020
+
+<h2>Output:</h2>
+Build target 'NixLed'
+compiling main.c...
+..\SRC\MAIN\MAIN.C(7): warning C206: 'NixLed': missing function-prototype
+compiling delay.c...
+compiling nixled.c...
+..\SRC\DEV\NIXLED.C(6): warning C280: 'i': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=17.0 xdata=0 code=200
+creating hex file from "..\output\obj"...
+"..\output\obj" - 0 Error(s), 3 Warning(s).

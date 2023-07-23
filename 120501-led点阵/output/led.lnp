@@ -1,0 +1,5 @@
+"..\output\main.obj",
+"..\output\hc595send.obj",
+"..\output\delay.obj" 
+TO "..\output\led" 
+PRINT(".\led.m51") RAMSIZE(256) 

@@ -1,0 +1,64 @@
+C51 COMPILER V9.01   KEY                                                                   11/17/2020 20:54:35 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE KEY
+OBJECT MODULE PLACED IN ..\output\key.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\dev\key.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) DEB
+                    -UG OBJECTEXTEND PRINT(.\key.lst) OBJECT(..\output\key.obj)
+
+line level    source
+
+   1          #include <key.h>
+   2          #include <delay.h>
+   3          #include <config.h>
+   4          
+   5          void KeyDown()
+   6          {
+   7   1              k1 = 1; k2 = 1;
+   8   1      
+   9   1      
+  10   1              k3 = 0;
+  11   1              if(k1 == 0)
+  12   1              {
+  13   2                      delay();
+  14   2                      if(k1 == 0)
+  15   2                              LED1 = ~LED1;
+  16   2              }
+  17   1              if(k2 == 0)
+  18   1              {
+  19   2                      delay();
+  20   2                      if(k2 == 0)
+  21   2                              LED3 = ~LED3;
+  22   2              }
+  23   1              k3 = 1;
+  24   1      
+  25   1      
+  26   1              k4 = 0;
+  27   1              if(k1 == 0)
+  28   1              {
+  29   2                      delay();
+  30   2                      if(k1 == 0)
+  31   2                              LED2 = ~LED2;
+  32   2              }
+  33   1              if(k2 == 0)
+  34   1              {
+  35   2                      delay();
+  36   2                      if(k2 == 0)
+  37   2                              LED4 = ~LED4;
+  38   2              }
+  39   1              k4 = 1;         
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     57    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

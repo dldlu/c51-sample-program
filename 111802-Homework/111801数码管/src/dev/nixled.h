@@ -1,0 +1,10 @@
+#ifndef _NIXLED_H_
+#define _NIXLED_H_
+
+#include "config.h"
+
+void NixLed();
+
+u8 nix[]={0x07,0x06,0x5b,0x7d,0x4f,0x6d,0x66};
+
+#endif

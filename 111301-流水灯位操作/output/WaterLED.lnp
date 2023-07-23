@@ -1,0 +1,5 @@
+"..\output\main.obj",
+"..\output\led.obj",
+"..\output\delay.obj" 
+TO "..\output\WaterLED" 
+PRINT(".\WaterLED.m51") RAMSIZE(256) 

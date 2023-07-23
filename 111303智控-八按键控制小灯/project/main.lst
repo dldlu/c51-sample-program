@@ -1,0 +1,126 @@
+C51 COMPILER V9.01   MAIN                                                                  11/17/2020 20:56:50 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN ..\output\main.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\sys\main.c BROWSE DEBUG OBJECTEXTEND PRINT(.\main.lst) OBJECT(
+                    -..\output\main.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <intrins.h>
+   3          
+   4          sbit P17=P1^7;
+   5          sbit P16=P1^6;
+   6          sbit P13=P1^3;
+   7          sbit P12=P1^2;
+   8          sbit P11=P1^1;
+   9          sbit P10=P1^0;
+  10          
+  11          sbit D1=P2^0;
+  12          sbit D2=P2^1;
+  13          sbit D3=P2^2;
+  14          sbit D4=P2^3;
+  15          sbit D5=P2^4;
+  16          sbit D6=P2^5;
+  17          sbit D7=P2^6;
+  18          sbit D8=P2^7;
+  19                   
+  20          void Delay10ms()                //@11.0592MHz
+  21          {
+  22   1              unsigned char i, j;
+  23   1      
+  24   1              i = 234;
+  25   1              j = 19;
+  26   1              do
+  27   1              {
+  28   2                      while (--j);
+  29   2              } while (--i);
+  30   1      }
+  31          
+  32          
+  33          void main()
+  34          {
+  35   1              while(1)
+  36   1              {
+  37   2                      P17=1;P16=1;P13=1;P12=1;
+  38   2      
+  39   2                      P13=0;
+  40   2                      if(P17==0)
+  41   2                      {
+  42   3                              Delay10ms();
+  43   3                              if(P17==0)       
+  44   3                              D1=~D1;
+  45   3                      }
+  46   2                      if(P16==0)
+  47   2                      {
+  48   3                              Delay10ms();
+  49   3                              if(P16==0)
+  50   3                              D5=~D5;
+  51   3                      }
+  52   2                      P13=1;
+  53   2      
+  54   2                      P12=0;
+C51 COMPILER V9.01   MAIN                                                                  11/17/2020 20:56:50 PAGE 2   
+
+  55   2                      if(P17==0)
+  56   2                      {
+  57   3                              Delay10ms();
+  58   3                              if(P17==0)
+  59   3                              D2=~D2; 
+  60   3                      }
+  61   2                      if(P16==0)
+  62   2                      {
+  63   3                              Delay10ms();
+  64   3                              if(P16==0)
+  65   3                              D6=~D6;
+  66   3                      }
+  67   2                      P12=1;
+  68   2      
+  69   2                      P11=0;
+  70   2                      if(P17==0)
+  71   2                      {
+  72   3                              Delay10ms();
+  73   3                              if(P17==0)
+  74   3                              D3=~D3; 
+  75   3                      }
+  76   2                      if(P16==0)
+  77   2                      {
+  78   3                              Delay10ms();
+  79   3                              if(P16==0)
+  80   3                              D7=~D7;
+  81   3                      }
+  82   2                      P11=1;
+  83   2      
+  84   2                      P10=0;
+  85   2                      if(P17==0)
+  86   2                      {
+  87   3                              Delay10ms();
+  88   3                              if(P17==0)
+  89   3                              D4=~D4; 
+  90   3                      }
+  91   2                      if(P16==0)
+  92   2                      {
+  93   3                              Delay10ms();
+  94   3                              if(P16==0)
+  95   3                              D8=~D8;
+  96   3                      }
+  97   2                      P10=1;
+  98   2                      
+  99   2              }
+ 100   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    123    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

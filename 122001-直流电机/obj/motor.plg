@@ -1,0 +1,43 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\Keil\2020\122001-直流电机\obj\motor.uvproj
+Project File Date:  12/20/2020
+
+<h2>Output:</h2>
+compiling main.c...
+..\src\main\main.c(3): warning C318: can't open file 'delay.h'
+..\SRC\MAIN\MAIN.C(6): error C132: 'main': not in formal parameter list
+..\SRC\MAIN\MAIN.C(6): error C141: syntax error near '{'
+..\SRC\MAIN\MAIN.C(8): error C132: 'MotorOn5s': not in formal parameter list
+..\SRC\MAIN\MAIN.C(8): error C141: syntax error near 'while'
+..\src\main\main.c - 4 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+..\src\main\main.c(3): warning C318: can't open file 'delay.h'
+..\SRC\MAIN\MAIN.C(6): error C132: 'main': not in formal parameter list
+..\SRC\MAIN\MAIN.C(6): error C141: syntax error near '{'
+..\SRC\MAIN\MAIN.C(8): error C132: 'MotorOn5s': not in formal parameter list
+..\SRC\MAIN\MAIN.C(8): error C141: syntax error near 'while'
+compiling motor.c...
+..\src\dev\motor.c(2): warning C318: can't open file 'delay.h'
+..\SRC\DEV\MOTOR.C(5): error C132: 'MotorOn5s': not in formal parameter list
+..\SRC\DEV\MOTOR.C(5): error C141: syntax error near '{'
+..\SRC\DEV\MOTOR.C(6): error C136: 'i': 'void' on variable
+..\SRC\DEV\MOTOR.C(6): error C132: 'i': not in formal parameter list
+..\SRC\DEV\MOTOR.C(7): error C244: 'motor': can't initialize, bad type or class
+..\SRC\DEV\MOTOR.C(7): error C132: 'motor': not in formal parameter list
+..\SRC\DEV\MOTOR.C(8): error C141: syntax error near 'for'
+..\SRC\DEV\MOTOR.C(8): error C141: syntax error near '=', expected ')'
+..\SRC\DEV\MOTOR.C(8): error C129: missing ';' before '<'
+compiling delay.c...
+Target not created
+compiling main.c...
+..\src\main\main.c(3): warning C318: can't open file 'delay.h'
+..\SRC\MAIN\MAIN.C(6): error C132: 'main': not in formal parameter list
+..\SRC\MAIN\MAIN.C(6): error C141: syntax error near '{'
+..\SRC\MAIN\MAIN.C(8): error C132: 'MotorOn5s': not in formal parameter list
+..\SRC\MAIN\MAIN.C(8): error C141: syntax error near 'while'
+..\src\main\main.c - 4 Error(s), 1 Warning(s).

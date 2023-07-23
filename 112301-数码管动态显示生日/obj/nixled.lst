@@ -1,0 +1,58 @@
+C51 COMPILER V9.01   NIXLED                                                                11/23/2020 15:19:29 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE NIXLED
+OBJECT MODULE PLACED IN ..\output\nixled.obj
+COMPILER INVOKED BY: D:\Keil\Setup\C51\BIN\C51.EXE ..\src\dev\nixled.c BROWSE INCDIR(..\src\dev;..\src\main;..\src\sys) 
+                    -DEBUG OBJECTEXTEND PRINT(.\nixled.lst) OBJECT(..\output\nixled.obj)
+
+line level    source
+
+   1          #include "nixled.h"
+   2          #include "delay.h"
+   3          
+   4          void NixLed()
+   5          {
+   6   1              u8 i;
+   7   1      //      LSA = 0; LSB = 0; LSC = 0;                              //"最后一位显示7"
+   8   1      //      P0 = nix[0];
+   9   1              for(i = 0; i < 6; i++)                                  //"显示7126354"
+  10   1              {
+  11   2                      switch(i)
+  12   2                      {
+  13   3                              case(0):
+  14   3                              LSA=1;LSB=1;LSC=1; break;
+  15   3                              case(1):
+  16   3                              LSA=0;LSB=1;LSC=1; break;
+  17   3                              case(2):
+  18   3                              LSA=1;LSB=0;LSC=1; break;
+  19   3                              case(3):        
+  20   3                              LSA=0;LSB=0;LSC=1; break;
+  21   3                              case(4):
+  22   3                              LSA=1;LSB=1;LSC=0; break;
+  23   3                              case(5):
+  24   3                              LSA=0;LSB=1;LSC=0; break;
+  25   3                              case(6):
+  26   3                              LSA=1;LSB=0;LSC=0; break;
+  27   3                              case(7):
+  28   3                              LSA=0;LSB=0;LSC=0; break;
+  29   3                      }
+  30   2                      P0 = nix[i];
+  31   2                      delay_ms(2);
+  32   2                      P0 = 0x00;
+  33   2                      }
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    115    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
